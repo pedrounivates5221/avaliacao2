@@ -5,11 +5,11 @@ export const db = SQLite.openDatabaseSync('treinos.db');
 export function initDb() {
   db.execSync(`
     PRAGMA journal_mode = WAL;
-    CREATE TABLE IF NOT EXISTS treinos (
+    CREATE TABLE IF NOT EXISTS filmes (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        atividade TEXT NOT NULL,
-        duracaoMin INTEGER,
-        categoria TEXT
+        titulo TEXT NOT NULL,
+        ano INTEGER,
+        genero TEXT
     );
 `);
 }
